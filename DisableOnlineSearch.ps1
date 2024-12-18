@@ -42,7 +42,7 @@ if ($WhatIf) {
     write-host "valueType:`t$valueType"
 }
 else {
-    #[Microsoft.Win32.Registry]::SetValue($key, $value, $valueData, $valueType)
+    [Microsoft.Win32.Registry]::SetValue($key, $value, $valueData, $valueType)
 
     $property = Get-ItemProperty -Path "Registry::$key" -name $value
     if ($property.DisableSearchBoxSuggestions -eq 1) {
