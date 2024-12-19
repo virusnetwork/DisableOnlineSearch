@@ -26,9 +26,6 @@ param (
     $WhatIf
 )
 
-
-Write-Host "Creating key in Regex"
-Write-Warning "WORSE CASE SCENARIO THIS MAY BREAK YOUR SYSTEM I TAKE NO RESPONSIBILITY FOR THAT"
 $key = 'HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\Explorer'
 $value = 'DisableSearchBoxSuggestions'
 $valueData = 1
